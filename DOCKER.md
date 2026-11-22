@@ -1,6 +1,6 @@
 # Docker
 
-Run 9Router in a container. Published image: [`decolua/9router`](https://hub.docker.com/r/decolua/9router) — multi-platform `linux/amd64` + `linux/arm64`.
+Run HiveRouter in a container. Published image: [`ghcr.io/trieuluan/hiverouter`](https://github.com/trieuluan/hiverouter/pkgs/container/hiverouter) — multi-platform `linux/amd64` + `linux/arm64`.
 
 ---
 
@@ -13,8 +13,8 @@ docker run -d \
   -p 20128:20128 \
   -v "$HOME/.9router:/app/data" \
   -e DATA_DIR=/app/data \
-  --name 9router \
-  decolua/9router:latest
+  --name hiverouter \
+  ghcr.io/trieuluan/hiverouter:latest
 ```
 
 App listens on port `20128`. Open: http://localhost:20128
@@ -22,10 +22,10 @@ App listens on port `20128`. Open: http://localhost:20128
 ## Manage container
 
 ```bash
-docker logs -f 9router        # view logs
-docker stop 9router           # stop
-docker start 9router          # start again
-docker rm -f 9router          # remove
+docker logs -f hiverouter        # view logs
+docker stop hiverouter           # stop
+docker start hiverouter          # start again
+docker rm -f hiverouter          # remove
 ```
 
 ## Data persistence

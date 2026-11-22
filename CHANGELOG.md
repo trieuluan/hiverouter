@@ -1,3 +1,15 @@
+# v0.5.120 (2026-11-23)
+
+## HiveRouter Fork & Packaging
+- **Rebrand**: Forked from `9router` (`v0.5.119`) as **HiveRouter** (`@trieuluan/hiverouter` CLI, `hiverouter-app` web dashboard).
+- **Release Automation**: Added `.github/workflows/publish.yml` to automatically build and publish `@trieuluan/hiverouter` to npm when pushing `v*` tags.
+
+## Features & Fixes
+- **Vision / Token Saving**: Added native `normalizeToolOutputImages` (`open-sse/utils/toolImageNormalize.js`) for both `/v1/responses` (`function_call_output`) and `/v1/messages` (`tool_result`) so embedded screenshots are lifted to vision parts instead of stringified as base64 text.
+- **Antigravity Translator**: Added native `CLAUDE_BLOCK.IMAGE` → `inlineData` support in `open-sse/translator/request/openai-to-gemini.js`.
+- **Responses API**: Ported upstream PR #5799 to flatten MCP `namespace` tools (`defer_loading: true`) for non-OpenAI providers.
+- **Headers**: Ported upstream PR #5802 to expose `x-9router-model` and `x-9router-context-window` response headers from `chatCore`.
+
 # v0.5.119 (2026-11-11)
 
 ## Features

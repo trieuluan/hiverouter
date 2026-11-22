@@ -24,7 +24,7 @@ concurrency:
   queue: max
 
 env:
-  DOCKERHUB_IMAGE: decolua/9router
+  DOCKERHUB_IMAGE: trieuluan/hiverouter
 
 jobs:
   prepare:
