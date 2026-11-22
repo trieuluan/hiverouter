@@ -1,9 +1,13 @@
 {
-  "name": "9router",
+  "name": "@trieuluan/hiverouter",
   "version": "0.5.119",
-  "description": "9Router CLI - Start and manage 9Router server",
+  "description": "HiveRouter CLI - Start and manage HiveRouter server",
   "bin": {
-    "9router": "./cli.js"
+    "hiverouter": "./cli.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/trieuluan/hiverouter.git"
   },
   "files": [
     "cli.js",
@@ -37,6 +41,7 @@
     "node": ">=20.18.1"
   },
   "keywords": [
+    "hiverouter",
     "9router",
     "cli",
     "proxy",

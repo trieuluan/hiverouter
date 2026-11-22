@@ -1,7 +1,7 @@
 {
-  "name": "9router-app",
+  "name": "hiverouter-app",
   "version": "0.5.116",
-  "description": "9Router web dashboard",
+  "description": "HiveRouter web dashboard",
   "private": true,
   "engines": {
     "node": ">=20.18.1"

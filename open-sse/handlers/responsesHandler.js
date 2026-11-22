@@ -5,6 +5,7 @@
 
 import { handleChatCore } from "./chatCore.js";
 import { convertResponsesApiFormat } from "../translator/formats/responsesApi.js";
+import { normalizeToolOutputImages } from "../utils/toolImageNormalize.js";
 import { createResponsesApiTransformStream } from "../transformer/responsesTransformer.js";
 import { convertResponsesStreamToJson } from "../transformer/streamToJsonConverter.js";
 import { SSE_HEADERS_CORS } from "../utils/sseConstants.js";
@@ -23,6 +24,7 @@ import { SSE_HEADERS_CORS } from "../utils/sseConstants.js";
  * @returns {Promise<{success: boolean, response?: Response, status?: number, error?: string}>}
  */
 export async function handleResponsesCore({ body, modelInfo, credentials, log, onCredentialsRefreshed, onRequestSuccess, onDisconnect, connectionId }) {
+  normalizeToolOutputImages(body);
   // Convert Responses API format to Chat Completions format
   const convertedBody = convertResponsesApiFormat(body);
 

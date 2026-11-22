@@ -26,6 +26,7 @@ import * as log from "../utils/logger.js";
 import { updateProviderCredentials, checkAndRefreshToken } from "../services/tokenRefresh.js";
 import { getProjectIdForConnection } from "open-sse/services/projectId.js";
 import { stripModelContextMarker } from "open-sse/utils/modelMarkers.js";
+import { normalizeToolOutputImages } from "open-sse/utils/toolImageNormalize.js";
 import { getKeyAccessContext, enforceKeyAccess, filterAdapterModels } from "../services/keyAccess.js";
 import { resolveSmartChoice } from "../services/systemoneRouter.js";
 
@@ -42,6 +43,8 @@ export async function handleChat(request, clientRawRequest = null) {
     log.warn("CHAT", "Invalid JSON body");
     return errorResponse(HTTP_STATUS.BAD_REQUEST, "Invalid JSON body");
   }
+
+  normalizeToolOutputImages(body);
 
   // Build clientRawRequest for logging (if not provided)
   if (!clientRawRequest) {

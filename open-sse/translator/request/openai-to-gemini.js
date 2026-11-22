@@ -420,6 +420,13 @@ function wrapInCloudCodeEnvelopeForClaude(model, claudeRequest, credentials = nu
         for (const block of msg.content) {
           if (block.type === CLAUDE_BLOCK.TEXT) {
             parts.push({ text: block.text });
+          } else if (block.type === CLAUDE_BLOCK.IMAGE && block.source?.data) {
+            parts.push({
+              inlineData: {
+                mimeType: block.source.media_type || "image/png",
+                data: block.source.data
+              }
+            });
           } else if (block.type === CLAUDE_BLOCK.TOOL_USE) {
             const cachedSig = block.id ? getGeminiThoughtSignatureSync(block.id, credentials?._clientSessionId, model) : null;
             const callSig = cachedSig || (!firstToolUseSeen ? signature : undefined);
