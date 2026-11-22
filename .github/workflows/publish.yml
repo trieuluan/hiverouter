@@ -39,6 +39,7 @@ jobs:
           "
 
       - name: Build and publish @trieuluan/hiverouter
-        run: npm --prefix cli publish --access public
+        working-directory: cli
+        run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
