@@ -1,3 +1,9 @@
+# v0.5.121 (2026-11-23)
+
+## Documentation & Release
+- **Docs**: Rebranded `README.md`, `cli/README.md`, `DOCKER.md`, and `docker-compose.yml` to HiveRouter (`@trieuluan/hiverouter`).
+- **Docker**: Configured `docker-publish.yml` to publish multi-platform images to Docker Hub (`chaybo2006/hiverouter`) and GHCR (`ghcr.io/trieuluan/hiverouter`).
+
 # v0.5.120 (2026-11-23)
 
 ## HiveRouter Fork & Packaging

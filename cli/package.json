@@ -1,6 +1,6 @@
 {
   "name": "@trieuluan/hiverouter",
-  "version": "0.5.120",
+  "version": "0.5.121",
   "description": "HiveRouter CLI - Start and manage HiveRouter server",
   "bin": {
     "hiverouter": "./cli.js"
