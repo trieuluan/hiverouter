@@ -40,7 +40,7 @@ docker run -d \
   -v "$HOME/.9router:/app/data" \
   -e DATA_DIR=/app/data \
   --name hiverouter \
-  ghcr.io/trieuluan/hiverouter:latest
+  chaybo2006/hiverouter:latest
 ```
 
 Open the dashboard at `http://localhost:20128`.

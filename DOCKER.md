@@ -1,6 +1,6 @@
 # Docker
 
-Run HiveRouter in a container. Published image: [`ghcr.io/trieuluan/hiverouter`](https://github.com/trieuluan/hiverouter/pkgs/container/hiverouter) — multi-platform `linux/amd64` + `linux/arm64`.
+Run HiveRouter in a container. Published image: [`chaybo2006/hiverouter`](https://hub.docker.com/r/chaybo2006/hiverouter) (and [`ghcr.io/trieuluan/hiverouter`](https://github.com/trieuluan/hiverouter/pkgs/container/hiverouter)) — multi-platform `linux/amd64` + `linux/arm64`.
 
 ---
 
@@ -14,7 +14,7 @@ docker run -d \
   -v "$HOME/.9router:/app/data" \
   -e DATA_DIR=/app/data \
   --name hiverouter \
-  ghcr.io/trieuluan/hiverouter:latest
+  chaybo2006/hiverouter:latest
 ```
 
 App listens on port `20128`. Open: http://localhost:20128

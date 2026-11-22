@@ -1,6 +1,6 @@
 services:
   hiverouter:
-    image: ghcr.io/trieuluan/hiverouter:latest
+    image: chaybo2006/hiverouter:latest
     container_name: hiverouter
     restart: always
     ports:
