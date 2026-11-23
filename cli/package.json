@@ -1,6 +1,6 @@
 {
   "name": "@trieuluan/hiverouter",
-  "version": "0.5.121",
+  "version": "0.5.124",
   "description": "HiveRouter CLI - Start and manage HiveRouter server",
   "bin": {
     "hiverouter": "./cli.js"
@@ -28,7 +28,7 @@
   },
   "dependencies": {
     "enquirer": "^2.4.1",
-    "node-forge": "^1.3.3",
+    "node-forge": "^1.4.3",
     "node-machine-id": "^1.1.12",
     "react": "19.2.1",
     "react-dom": "19.2.1",
@@ -52,5 +52,9 @@
   "devDependencies": {
     "esbuild": "^0.25.12",
     "nodemon": "^3.1.14"
+  },
+  "overrides": {
+    "minimatch": "^11.0.1",
+    "brace-expansion": "^5.0.13"
   }
 }
