@@ -1,6 +1,6 @@
 {
   "name": "hiverouter-app",
-  "version": "0.5.124",
+  "version": "0.5.125",
   "description": "HiveRouter web dashboard",
   "private": true,
   "engines": {

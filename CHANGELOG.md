@@ -1,3 +1,9 @@
+# v0.5.125 (2026-11-23)
+
+## UI & Updater
+- **Web UI**: Rebranded `APP_CONFIG.name` (`HiveRouter Proxy`), page title, manifest, and reset hint to HiveRouter.
+- **Version Check & Updater**: Pointed `/api/version` and `UPDATER_CONFIG` to `@trieuluan/hiverouter` and `trieuluan/hiverouter` changelog.
+
 # v0.5.124 (2026-11-23)
 
 ## Upstream Sync
